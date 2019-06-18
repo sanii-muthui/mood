@@ -49,7 +49,7 @@ svg path{
 }
 
 
-@import url('bootstrap.css');
+@import url('bootstrap.min.css');
 body{
 	margin: 0!important;
 	padding: 0!important;
