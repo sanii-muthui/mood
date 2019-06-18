@@ -48,7 +48,12 @@ svg path{
   }
 }
 
+<<<<<<< HEAD
 @import url('bootstrap.css');
+=======
+
+@import url('bootstrap.min.css');
+>>>>>>> 61dbcd0c2f8c5bdc11186b1c2e5282ecd6be756e
 body{
 	margin: 0!important;
 	padding: 0!important;
