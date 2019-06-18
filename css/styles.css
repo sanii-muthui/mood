@@ -1,3 +1,54 @@
+body {
+  overflow-y:hidden;
+}
+
+.brain {
+  text-align: center;
+  background-color: #000;
+}
+
+.name{
+  font-size: 40px;
+}
+
+
+svg {
+  max-width: 70%;
+  max-height: 30%;
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+svg path{
+/*   fill-opacity: 0;
+  fill: #fff !important; */
+  stroke: #ffff;
+  stroke-width: 10;
+  stroke-dasharray: 100;
+  stroke-dashoffset: 80;
+  animation-name: draw;
+  animation-duration: 10s;
+  animation-iteration-count: 100;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+
+@keyframes draw {
+  50% {
+    stroke-dashoffset: 0;
+    stroke-width: 1;
+    fill-opacity: 10;
+  }
+  100% {
+    stroke-width: 1;
+    fill-opacity: 1;
+  }
+}
+
+
 @import url('bootstrap.css');
 body{
 	margin: 0!important;
