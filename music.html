@@ -74,6 +74,497 @@ body {
     margin: 0;
     overflow: hidden;
 }
+@charset "UTF-8";
+/* reset5 © 2011 opensource.736cs.com MIT */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, audio, canvas, details, figcaption, figure, footer, header, hgroup, mark, menu, meter, nav, output, progress, section, summary, time, video {
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  line-height: 1;
+}
+
+
+
+@font-face {
+  font-family: GeoSans;
+  src: url(//s3-us-west-2.amazonaws.com/s.cdpn.io/164143/GeosansLight.ttf);
+}
+/*cascade starts*/
+body {
+  font-family: GeoSans;
+  /*font-size: 62.5%;*/
+  background-color: #FFFFFF;
+  background-size: cover;
+  -webkit-animation: hue 3s infinite linear;
+}
+
+@-webkit-keyframes hue {
+  from {
+    -webkit-filter: hue-rotate(0deg);
+  }
+  to {
+    -webkit-filter: hue-rotate(-360deg);
+  }
+}
+@-webkit-keyframes goTopZero {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(700px);
+  }
+}
+
+
+
+@-webkit-keyframes rot {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+@keyframes rot {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+.alert {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background: rgba(70, 70, 70, 0.4);
+  z-index: 1000;
+  color: #FFFFFF;
+  line-height: 100vh;
+  text-align: center;
+}
+
+.visible {
+  -webkit-transition: top 500ms;
+  top: 0px;
+}
+
+.hidden {
+  -webkit-transition: top 500ms;
+  top: -700px;
+}
+
+/*
+header
+*/
+header {
+  width: 100%;
+  height: 100px;
+  background-color: rgba(150, 150, 150, 0.6);
+}
+header > h1 {
+  padding-top: 34px;
+  margin-left: 100px;
+  display: inline-block;
+  float: left;
+}
+header > ul {
+  width: 400px;
+  float: right;
+  padding-top: 34px;
+}
+header > ul li {
+  display: block;
+  width: 160px;
+  height: 50px;
+  float: left;
+  line-height: 50px;
+}
+header > ul li:nth-child(1) {
+  text-align: center;
+}
+header > ul li:nth-child(1):hover {
+  cursor: pointer;
+}
+header > ul li:nth-child(2) input {
+  border-radius: 5px;
+  height: 20px;
+  padding: 0 10px;
+  outline-width: 0;
+  font-family: GeoSans;
+  font-size: 11px;
+  width: 150px;
+}
+
+/*
+nav
+*/
+#genre-container {
+  position: absolute;
+  width: 100%;
+  display: block;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+#genre-container ul li h2 {
+  margin: 10px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+#genre > ul {
+  margin: 10px auto;
+}
+#genre > ul > li:hover {
+  cursor: pointer;
+}
+
+#track-picker {
+  width: 100%;
+  height: 220px;
+  position: absolute;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.6);
+  display: none;
+}
+#track-picker p {
+  display: block;
+  width: 120px;
+  margin: 15px auto 0;
+  text-align: center;
+  text-decoration: underline;
+  cursor: pointer;
+}
+#track-picker svg {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 90px;
+  z-index: 100;
+}
+#track-picker svg.close-btn {
+  top: 10px;
+  right: 10px;
+}
+#track-picker svg:hover {
+  cursor: pointer;
+}
+#track-picker svg#left-arrow {
+  left: 10px;
+}
+#track-picker svg#right-arrow {
+  right: 10px;
+}
+#track-picker ul {
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+}
+#track-picker ul li {
+  display: block;
+  width: 150px;
+  height: 150px;
+  margin: 20px 20px;
+  background-color: #959595;
+  float: left;
+}
+#track-picker ul li figure {
+  filter: grayscale(1);
+  -webkit-filter: grayscale(1);
+  transition: -webkit-filter 1s;
+  cursor: pointer;
+  position: relative;
+}
+#track-picker ul li figure:hover {
+  -webkit-filter: grayscale(0);
+  transition: -webkit-filter 1s;
+}
+#track-picker ul li figure img {
+  width: 150px;
+  height: 150px;
+  display: block;
+}
+#track-picker ul li figure figcaption {
+  font-size: 11px;
+  color: #FFFFFF;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.3);
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  text-align: center;
+  width: 150px;
+  padding: 10px 0;
+}
+#track-picker ul li figure figcaption span {
+  display: block;
+  width: 150px;
+}
+#track-picker ul li figure figcaption span.track-duration {
+  margin-top: 15px;
+}
+#track-picker ul li figure figcaption span.artist-name {
+  display: none;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  #genre > ul {
+    width: 160px;
+  }
+}
+@media (min-width: 480px) and (max-width: 640px) {
+  #genre > ul {
+    width: 320px;
+  }
+}
+@media (min-width: 640px) and (max-width: 800px) {
+  #genre > ul {
+    width: 480px;
+  }
+}
+@media (min-width: 800px) and (max-width: 960px) {
+  #genre > ul {
+    width: 640px;
+  }
+}
+@media (min-width: 960px) and (max-width: 1120px) {
+  #genre > ul {
+    width: 800px;
+  }
+}
+@media (min-width: 1120px) and (max-width: 1280px) {
+  #genre > ul {
+    width: 960px;
+  }
+}
+@media (min-width: 1280px) and (max-width: 1440px) {
+  #genre > ul {
+    width: 1120px;
+  }
+}
+@media (min-width: 1440px) {
+  #genre > ul {
+    width: 1300px;
+  }
+}
+#genre > ul > li {
+  line-height: 2em;
+}
+
+/*
+jukebox
+*/
+#juke-box {
+  position: fixed;
+  width: 100%;
+  height: 120px;
+  border: 1px solid #D2D2D2;
+  z-index: 100;
+  bottom: 0;
+  background-color: rgba(150, 150, 150, 0.6);
+  /*text-align: center;*/
+}
+#juke-box > ul > li {
+  list-style: none;
+  text-align: center;
+  line-height: 2em;
+  margin: 0 auto;
+  overflow-y: hidden;
+}
+#juke-box > ul > li:nth-of-type(1) {
+  font-size: 22px;
+  height: 44px;
+  width: 95%;
+}
+#juke-box > ul > li:nth-of-type(2) {
+  font-size: 18px;
+  height: 36px;
+  width: 70%;
+  line-height: 24px;
+}
+
+/*
+track-bar
+*/
+#track-bar-container {
+  height: 20px;
+  width: 60%;
+  position: relative;
+  left: 20%;
+  padding-top: 15px;
+  cursor: pointer;
+}
+#track-bar-container #track-bar {
+  height: 5px;
+  background-color: #000000;
+  position: relative;
+}
+#track-bar-container #track-bar > span {
+  position: absolute;
+  top: -5px;
+}
+#track-bar-container #track-bar > span:nth-of-type(1) {
+  left: calc(0% - 50px);
+}
+#track-bar-container #track-bar > span:nth-of-type(2) {
+  right: calc(0% - 50px);
+}
+
+/*
+progress bar
+*/
+#progress-bar {
+  width: 200px;
+  background-color: #FFFFFF;
+  height: 5px;
+}
+
+#fader {
+  width: 10px;
+  height: 25px;
+  position: relative;
+  left: 200px;
+  top: -15px;
+  background-color: #ffffff;
+}
+
+
+
+li#genre > ul > li {
+  float: left;
+  width: 160px;
+  text-align: center;
+}
+
+
+/*
+main-visual
+*/
+#main-visual {
+  width: 50vh;
+  height: 50vh;
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/164143/irememberyou-vs.jpg) center center no-repeat;
+  background-size: cover;
+  position: absolute;
+  left: 50%;
+  margin-left: -25vh;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  z-index: -1;
+}
+
+/*
+play-btn
+*/
+#play-btn {
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/164143/play.png) 5px 5px no-repeat;
+  background-size: 30px 30px;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 45px;
+  left: 100px;
+  cursor: pointer;
+}
+
+/*
+volume container
+*/
+#volume-container {
+  float: right;
+  margin-top: -67px;
+  margin-right: 100px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  -webkit-transition: margin-top 1s;
+}
+#volume-container:hover {
+  margin-top: -130px;
+  height: 140px;
+  cursor: pointer;
+  -webkit-transition: margin-top 1s;
+}
+#volume-container:hover > input[type=range] {
+  display: block;
+  margin-top: 5px;
+  cursor: pointer;
+}
+#volume-container > img {
+  width: 26px;
+  height: auto;
+  left: 8px;
+  top: 5px;
+  position: relative;
+  z-index: 30;
+}
+#volume-container > input[type=range] {
+  display: none;
+  -webkit-appearance: none;
+  -webkit-transform: rotate(-90deg);
+  outline: 0;
+  position: relative;
+  top: 47px;
+  left: -32px;
+  background-color: #EBEBEB;
+  height: 8px;
+  width: 100px;
+  border-radius: 6px;
+}
+#volume-container > input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #FFFFFF;
+}
+
+/*
+media query
+*/
+@media (max-width: 1024px) {
+  #play-btn {
+    left: 50px;
+  }
+
+  #volume-container {
+    margin-right: 50px;
+  }
+
+  #main-visual {
+    width: 719px;
+  }
+}
+@media (max-width: 719px) {
+  #main-visual {
+    width: 100%;
+    height: 300px;
+  }
+}
+@media (max-width: 700px) {
+  #play-btn {
+    left: 20px;
+  }
+
+  #volume-container {
+    margin-right: 20px;
+  }
+}
 
 </style>
 </head>
@@ -81,17 +572,7 @@ body {
   
 <div class="navbar">
   <a href="#home">Home</a>
-  <a href="#music">Music</a>
-  
-  
-  
-  
-    
-   
-  
-  
-  
-  
+  <a href="#music">Music</a> 
   <div class="dropdown">
   <button class="dropbtn" onclick="myFunction()">Genre
     <i class="fa fa-caret-down"></i>
@@ -110,7 +591,25 @@ body {
     
     <canvas></canvas>
 
-
+<section id="juke-box">
+      <div id="play-btn"></div>
+      <ul>
+        <li>Track Title</li>
+        <li>Artist Name</li>
+      </ul>
+      <div id="track-bar-container">
+        <div id="track-bar">
+          <div id="progress-bar"></div>
+          <div id="fader"></div>
+          <span id="playback-time">0:00</span>
+          <span id="song-duration">4:00</span>
+        </div>
+      </div>
+      <div id="volume-container">
+        <img alt="play" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/164143/volume_loud.png">
+        <input type="range" min="0" max="100" value="100">
+      </div>
+    </section>
 
 <script>
 
