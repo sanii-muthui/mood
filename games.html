@@ -10,34 +10,35 @@
 <body>
   <div class="container">
     <style media="screen">
-
       @import url('bootstrap.min.css');
 
       body {
         margin: 0 !important;
         padding: 0 !important;
+      background-image: url("https://images.unsplash.com/photo-1470790376778-a9fbc86d70e2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=349&q=80")
+      ;     }
+
+      .col-8 {
+        background-color: rgba(0,0,0,0.8);
+        width: 100%;
       }
 
-      .col-md-8 {
-        background-color: #2B2B2C;
-      }
-
-      .col-md-8 img {
+      .col-8 img {
         margin-top: 70px;
       }
 
-      .col-md-8 h1 {
+      .col-8 h1 {
         text-align: center;
         color: white;
         font-style: oblique;
       }
 
-      .col-md-8 p {
+      .col-8 p {
         text-align: center;
         color: white;
       }
 
-      hr{
+      hr {
         border-style: none;
       }
 
@@ -48,8 +49,25 @@
       .title {
         float: left;
         background-color: #f1f1f1;
+        width: 100%;
       }
 
+      .title button {
+        display: block;
+        background-color: inherit;
+        color: black;
+        padding: 22px 16px;
+        width: 100%;
+        border: none;
+        outline: none;
+        text-align: left;
+        cursor: pointer;
+        transition: 0.3s;
+        font-size: 17px;
+      }
+
+      .title button:hover {
+        background-color: #ddd;
       }
     </style>
 
@@ -82,43 +100,77 @@
     <!-- lets screw things up -->
     <br><br>
 
-      <div class="row">
-        <div class="col-md-4">
-          <div class="col-4">
-		<div class="title">
-			<button class="links" onclick="openCast(event, 'home')">Home</button><hr>
-           <button class="links" onclick="openCast(event, 'education')">Action games</button><hr>
-           <button class="links" onclick="openCast(event, 'environment')">Sport games</button><hr>
-            <button class="links" onclick="openCast(event, 'food')">Battle Royale games</button><hr>
-            <button class="links" onclick="openCast(event, 'student')">Role-playing games</button><hr>
-            <button class="links" onclick="openCast(event, 'technology')">Adventure games</button><hr>
-            <button class="links" onclick="openCast(event, 'lifestyle')">Racing games</button>
-            <button class="links" onclick="openCast(event, 'lifestyle')">Fighting games</button>
-            <button class="links" onclick="openCast(event, 'lifestyle')">Real-time strategy games</button>
-            <button class="links" onclick="openCast(event, 'lifestyle')">Simulator</button>
+    <div class="row">
+        <div class="col-4">
+          <div class="title">
+            <button class="links" onclick="openCast(event, 'home')">Home</button>
+            <hr>
+            <button class="links" onclick="openGame(event, 'action')">Action games</button>
+            <hr>
+            <button class="links" onclick="openGame(event, 'sport')">Sport games</button>
+            <hr>
+            <button class="links" onclick="openGame(event, 'brg')">Battle Royale games</button>
+            <hr>
+            <button class="links" onclick="openGame(event, 'rpg')">Role-playing games</button>
+            <hr>
+            <button class="links" onclick="openGame(event, 'adventure')">Adventure games</button>
+            <hr>
+            <button class="links" onclick="openGame(event, 'racing')">Racing games</button>
+            <hr>
+            <button class="links" onclick="openGame(event, 'fighting')">Fighting games</button>
+            <hr>
+            <button class="links" onclick="openGame(event, 'rts')">Real-time strategy games</button>
+            <hr>
+            <button class="links" onclick="openGame(event, 'simulator')">Simulator</button>
+            <hr>
+          </div>
+      </div>
+
+      <div class="col-8">
+        <div class="content" id="home">
+          <img src="images/game1.jpg" class="mx-auto d-block" alt="Cinque Terre" width="330" height="240">
+          <h1>PlayerLair</h1>
+          <p>This section brings you links to play or download video games and reviews of the most exciting releases. We cover everything from PlayStation and Xbox blockbusters, to quirky Nintendo games, to the cool indie gems on PC and Android that
+            you might otherwise miss. We have genres listed down for you, to help you choose a game that your mood needs</p>
+          <footer class="page-footer font-small cyan darken-3">
+            <div class="footer" style="text-align:center">
+              <div class="footer-copyright text-center py-3">© 2019 Copyright: Mood-sync</div>
+              <div class="footer-copyright text-center py-3">Follow us on:</div>
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-square-o fa-stack-2x"></i>
+                <i class="fa fa-twitter fa-stack-1x"></i>
+              </span>
+              <span class="fa-stack fa-lg"> <i class="fa fa-instagram fa-stack-2x" aria-hidden="true"></i></span>
+              <span class="fa-stack fa-lg"> <i class="fa fa-github fa-stack-2x" aria-hidden="true"></i></span>
+            </div>
+          </footer>
         </div>
-		</div>
+        <div class="content" id="action">
+
+        </div>
+        <div class="content" id="sport">
+
+        </div>
+        <div class="content" id="brg">
+
+        </div>
+        <div class="content" id="rpg">
+
+        </div>
+        <div class="content" id="adventure">
+
+        </div>
+        <div class="content" id="fighting">
+
+        </div>
+        <div class="content" id="trs">
+
+        </div>
+        <div class="content" id="simulator">
+
         </div>
 
-        <div class="col-md-8">
-          <div class="content" id="home">
-            <img src="images/game1.jpg" class="mx-auto d-block" alt="Cinque Terre" width="330" height="240">
-            <h1>PlayerLair</h1>
-            <p>This section brings you links to play or download video games and reviews of the most exciting releases. We cover everything from PlayStation and Xbox blockbusters, to quirky Nintendo games, to the cool indie gems on PC and Android that you might otherwise miss. We have genres listed down for you, to help you choose a game that your mood needs</p>
-            <footer class="page-footer font-small cyan darken-3">
-              <div class="footer" style="text-align:center">
-                <div class="footer-copyright text-center py-3">© 2019 Copyright: Mood-sync</div>
-                <div class="footer-copyright text-center py-3">Follow us on:</div>
-                <span class="fa-stack fa-lg">
-                  <i class="fa fa-square-o fa-stack-2x"></i>
-                  <i class="fa fa-twitter fa-stack-1x"></i>
-                </span>
-                <span class="fa-stack fa-lg"> <i class="fa fa-instagram fa-stack-2x" aria-hidden="true"></i></span>
-                <span class="fa-stack fa-lg"> <i class="fa fa-github fa-stack-2x" aria-hidden="true"></i></span>
-              </div>
-            </footer>
-          </div>
-        </div>
+      </div>
 
     </div>
     <br>
