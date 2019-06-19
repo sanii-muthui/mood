@@ -1,5 +1,5 @@
 body {
-  overflow-y:hidden;
+  overflow-z:hidden;
 }
 
 .brain {
@@ -11,8 +11,6 @@ body {
   font-size: 40px;
 }
 
-
-
 svg {
   max-width: 70%;
   max-height: 30%;
@@ -22,9 +20,6 @@ svg {
   right: 0;
   bottom: 0;
   margin: auto;
-}
-.nav {
-  position: fixed;
 }
 
 svg path{
@@ -53,12 +48,17 @@ svg path{
   }
 }
 
+<<<<<<< HEAD
 
 @import url('bootstrap.css');
 
 
 @import url('bootstrap.min.css');
 
+=======
+
+@import url('bootstrap.min.css');
+>>>>>>> caa83de14e544dbed6b7215a7d955676a534cb56
 body{
 	margin: 0!important;
 	padding: 0!important;
@@ -101,3 +101,4 @@ body{
 .title button:hover {
   background-color: #ddd;
 }
+
