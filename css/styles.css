@@ -1,16 +1,15 @@
-body {
+/* body {
   overflow-y:hidden;
-}
+} */
 
 .brain {
   text-align: center;
-  background-color: #241041 ;
+  background-color: #000;
 }
 
 .name{
   font-size: 40px;
 }
-
 
 
 svg {
@@ -23,10 +22,6 @@ svg {
   bottom: 0;
   margin: auto;
 }
-.nav {
-  position: fixed;
-}
-
 svg path{
 /*   fill-opacity: 0;
   fill: #fff !important; */
@@ -51,52 +46,4 @@ svg path{
     stroke-width: 1;
     fill-opacity: 1;
   }
-}
-
-
-@import url('bootstrap.css');
-
-
-@import url('bootstrap.min.css');
-body{
-	margin: 0!important;
-	padding: 0!important;
-}
-.col-8{
-	background-color: rgba(0,0,0,0.8);
-}
-.col-8 img{
-	margin-top: 70px;
-}
-.col-8 h1{
-	text-align: center;
-	color: white;
-	font-style: oblique;
-}
-.col-8 p{
-	text-align: center;
-	color: white;
-}
-.footer{
-	color: white;
-}
-.title{
-  float: left;
-  background-color: #f1f1f1;
-}
-.title button{
-  display: block;
-  background-color: inherit;
-  color: black;
-  padding: 22px 16px;
-  width: 100%;
-  border: none;
-  outline: none;
-  text-align: left;
-  cursor: pointer;
-  transition: 0.3s;
-  font-size: 17px;
-}
-.title button:hover {
-  background-color: #ddd;
 }
