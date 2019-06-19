@@ -4,7 +4,7 @@
 <head>
   <title>MOVIES</title>
   <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="shorcut icon" href="images/Emoji_emoticon_emoticons_expression_laugh_mood-512.png" type="image/png">
   <link href="https://fonts.googleapis.com/css?family=Pacifico|Oswald" rel="stylesheet">
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="js/scripts.js"></script>
@@ -67,7 +67,7 @@
    height: 400px;
    width: 50%;
  }
- h1,p,h2,label {
+ h1,p,h2,label,button {
    color: white;
  }
  </style>
@@ -91,37 +91,76 @@
    <h2><strong>KINDLY FILL IN THE FORM BELOW TO KNOW WHICH KINDS OF MOVIES YOU PREFER:</strong></h2>
   </div>
   <div id="blanks">
-      <form>
+      <form id="form">
          <div class="form-group">
-            <label for="person1">FIRST NAME: </label> 
-            <input id="person1" class="form-control" type="text">
+            <label for="firstname">FIRST NAME: </label> 
+            <input id="firstname" class="form-control" type="text">
          </div>
          <div class="form-group">
-            <label for="person2">SECOND NAME:</label>
-            <input id="person2" class="form-control" type="text">
+            <label for="secondname">SECOND NAME:</label>
+            <input id="secondname" class="form-control" type="text">
          </div>
          <div class="form-group">
-            <label for="animal">GENDER:</label>
-            <input id="animal" class="form-control" type="text">
+            <label for="gender">GENDER:</label>
+            <select class="form-control" id="gender">
+                <option>Male</option>
+                <option>Female</option>
+              </select>
          </div>
          <div class="form-group">
-            <label for="exclamation">WHICH GENRE DO YOU LIKE:</label>
-            <input id="exclamation" class="form-control" type="text">
+            <label for="genre">WHICH GENRE DO YOU LIKE:</label>
+            <select class="form-control" id="genre">
+                <option>Action</option>
+                <option>Sci-FI</option>
+                <option>Comedy</option>
+                <option>Drama</option>
+              </select>
          </div>
          <div class="form-group">
-            <label for="verb">MOOD:</label>
-            <input id="verb" class="form-control" type="text">
+            <label for="mood">MOOD: select [Happy,Sad,Thrilled,Sombre,Peaceful,Romance]</label>
+          <input type="text" class="form-control" id="mood">
          </div>
          <div class="form-group">
-            <label for="noun">EMAIL ADDRESS:</label>
-            <input id="noun" class="form-control" type="text">
+            <label for="email">EMAIL ADDRESS:</label>
+            <input id="email" class="form-control" type="text">
          </div>
-         <button type="submit" class="btn">SUGGESTIONS:</button>
+         <input type="button" id="submit" class="btn btn-primary" value="SUGGESTIONS" style="color: aliceblue!important">
       </form>
-    <div id="SUGGESTIONS">
-
+    <div id="SUGGESTIONS" >
+     <div id="gender">
     </div>
-<scripts>
-</scripts>
+    </div>
+<script>
+
+  $(document).ready(function() {
+      $("#submit").click(function(event) {
+        var firstnameInput = $("input#firstname").val();
+        var secondnameInput = $("input#secondname").val();
+        var genderInput = $("input#gender").val();
+        var genreInput = $("input#genre").val();
+        var moodInput = $("input#mood").val();
+        var emailInput = $("input#email").val()
+     if (moodInput=="Happy") {
+     alert("Angel Has Fallen, Hobbs and Shaw, Captain Marvel, Shazam!");
+     }else if(moodInput=="Sad"){
+      alert("How i met your mother, Murder Mystery, The Upside, Fighting with My Family, Instant Family");
+     }else if(moodInput=="Thrilled"){
+      alert("Annabelle, Glass, Us, I Am Mother, Captive State, Domino");
+     }
+     else if(moodInput=="Peaceful"){
+       alert("42 UNits");
+     }else if(moodInput=="Sombre"){
+      alert("Heist");
+     }else if(moodInput=="Romance"){
+      alert("Kissing Booth, Five feet Apart, The Perfect Date, Sunshine In Heaven, What Men Want");
+     }
+     else{
+      alert("select correct mood");  
+     }
+     ("#form")[0].reset();
+         });
+     }); 
+         
+</script>
  </body>
 </html>
