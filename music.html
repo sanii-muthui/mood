@@ -65,10 +65,20 @@
 .show {
   display: block;
 }
+ canvas {
+    width: 100vw;
+    height: 100vh;
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
 </style>
 </head>
-<body>
-
+  <body>
+  
 <div class="navbar">
   <a href="#home">Home</a>
   <a href="#music">Music</a>
@@ -80,12 +90,19 @@
     <a href="#">Category 1</a>
     <a href="#">Category 2</a>
     <a href="#">Category 3</a>
+    <audio controls>
+  <source src="https://dl.dropboxusercontent.com/s/ddtkqonlcyj1val/DrumsMelody.mp3" type="audio/mpeg">
+<embed height="70" width="300" src="https://dl.dropboxusercontent.com/s/ddtkqonlcyj1val/DrumsMelody.mp3">
+</audio>
+
   </div>
   </div>
 </div>
+    
+    
+    <canvas></canvas>
 
-<h3>Bustdown nav bar</h3>
-<p>There you go fishes.</p>
+
 
 <script>
 
@@ -101,6 +118,54 @@ window.onclick = function(e) {
     }
   }
 }
+var canvas = document.querySelector("canvas");
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+var context = canvas.getContext("2d");
+
+addEventListener("resize", () => {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+});
+
+var time = 6.0;
+function mainLoop() {
+    requestAnimationFrame(mainLoop);
+    time += 0.001;
+    
+    //--->
+    context.clearRect(0,0,canvas.width,canvas.height);
+    context.save();
+    
+    context.translate(canvas.width / 2, canvas.height / 2);
+    
+    for(var i = 0; i < 360; i++) {
+        context.beginPath();
+        
+        context.strokeStyle = `hsl(${i * 4}deg, 100%, 50%)`;
+        
+        var angle_1 = ((90 + i) + 180 * Math.sin(time)) * (Math.PI / 180);
+        var angle_2 = ((180 + i) + 180 * Math.sin(time)) * (Math.PI / 180);
+        var angle_3 = ((270 + i) + 180 * Math.sin(time)) * (Math.PI / 180);
+        
+        context.moveTo(-Math.cos(angle_1) * (canvas.width / 2 * Math.sin(time)), -Math.sin(angle_1) * (canvas.width / 2 * Math.sin(time)));
+        
+        context.lineTo(Math.cos(angle_2) * canvas.width / (7.5 * Math.cos(time) + 2.5 * Math.sin(time)), Math.sin(angle_2) * canvas.width / (7.5 * Math.cos(time) + 2.5 * Math.sin(time)));
+        
+        context.lineTo(Math.cos(angle_3) * canvas.width / 1, Math.sin(angle_3) * canvas.width / 1);
+        
+        context.closePath();
+        context.stroke();
+    }    
+    
+    context.restore();
+    //<---
+}
+
+requestAnimationFrame(mainLoop);
+
 </script>
 </body>
 </html>
