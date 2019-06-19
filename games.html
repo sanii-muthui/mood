@@ -1,40 +1,136 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Mood Sync</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/styles.css">
-     <ul class="nav justify-content-end bg-blue color-text-secondary mr-6">
 
-    <li class="nav-item">
-      <a class="nav-link  bg-info text-white" href="#aboutUs" target="_blank">About Us</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link  bg-info text-white" href="music.html" target="_blank">Music</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link  bg-info text-white" href="icast.html" target="_blank">Icasts</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link  bg-info text-white" href="movies.html" target="_blank"> Movies</a>
-    <li class="nav-item">
-      <a class="nav-link  bg-info text-white" href="games.html" target="_blank"> Games</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link  bg-info text-white" href="books.html" target="_blank">Books</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link  bg-info text-white" href="#contact" target="_blank">Contact Us</a>
-    </li>
-  </ul>
-  </head>
+<head>
+  <meta charset="utf-8">
+  <title>Mood Sync</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
 
-  <body>
+<body>
+  <div class="container">
+    <style media="screen">
 
-    <script src="js/jquery-3.4.1.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/scripts.js"></script>
-  </body>
+      @import url('bootstrap.min.css');
+
+      body {
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+
+      .col-md-8 {
+        background-color: #2B2B2C;
+      }
+
+      .col-md-8 img {
+        margin-top: 70px;
+      }
+
+      .col-md-8 h1 {
+        text-align: center;
+        color: white;
+        font-style: oblique;
+      }
+
+      .col-md-8 p {
+        text-align: center;
+        color: white;
+      }
+
+      hr{
+        border-style: none;
+      }
+
+      .footer {
+        color: white;
+      }
+
+      .title {
+        float: left;
+        background-color: #f1f1f1;
+      }
+
+      }
+    </style>
+
+    <br>
+
+    <ul class="nav justify-content-end bg-blue color-text-secondary mr-6">
+
+      <li class="nav-item">
+        <a class="nav-link  bg-info text-white" href="#aboutUs" target="_blank">About Us</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link  bg-info text-white" href="music.html" target="_blank">Music</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link  bg-info text-white" href="icast.html" target="_blank">Icasts</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link  bg-info text-white" href="movies.html" target="_blank"> Movies</a>
+      <li class="nav-item">
+        <a class="nav-link  bg-info text-white" href="games.html" target="_blank"> Games</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link  bg-info text-white" href="books.html" target="_blank">Books</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link  bg-info text-white" href="#contact" target="_blank">Contact Us</a>
+      </li>
+    </ul>
+
+    <!-- lets screw things up -->
+    <br><br>
+
+      <div class="row">
+        <div class="col-md-4">
+          <div class="col-4">
+		<div class="title">
+			<button class="links" onclick="openCast(event, 'home')">Home</button><hr>
+           <button class="links" onclick="openCast(event, 'education')">Action games</button><hr>
+           <button class="links" onclick="openCast(event, 'environment')">Sport games</button><hr>
+            <button class="links" onclick="openCast(event, 'food')">Battle Royale games</button><hr>
+            <button class="links" onclick="openCast(event, 'student')">Role-playing games</button><hr>
+            <button class="links" onclick="openCast(event, 'technology')">Adventure games</button><hr>
+            <button class="links" onclick="openCast(event, 'lifestyle')">Racing games</button>
+            <button class="links" onclick="openCast(event, 'lifestyle')">Fighting games</button>
+            <button class="links" onclick="openCast(event, 'lifestyle')">Real-time strategy games</button>
+            <button class="links" onclick="openCast(event, 'lifestyle')">Simulator</button>
+        </div>
+		</div>
+        </div>
+
+        <div class="col-md-8">
+          <div class="content" id="home">
+            <img src="images/game1.jpg" class="mx-auto d-block" alt="Cinque Terre" width="330" height="240">
+            <h1>PlayerLair</h1>
+            <p>This section brings you links to play or download video games and reviews of the most exciting releases. We cover everything from PlayStation and Xbox blockbusters, to quirky Nintendo games, to the cool indie gems on PC and Android that you might otherwise miss. We have genres listed down for you, to help you choose a game that your mood needs</p>
+            <footer class="page-footer font-small cyan darken-3">
+              <div class="footer" style="text-align:center">
+                <div class="footer-copyright text-center py-3">© 2019 Copyright: Mood-sync</div>
+                <div class="footer-copyright text-center py-3">Follow us on:</div>
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-square-o fa-stack-2x"></i>
+                  <i class="fa fa-twitter fa-stack-1x"></i>
+                </span>
+                <span class="fa-stack fa-lg"> <i class="fa fa-instagram fa-stack-2x" aria-hidden="true"></i></span>
+                <span class="fa-stack fa-lg"> <i class="fa fa-github fa-stack-2x" aria-hidden="true"></i></span>
+              </div>
+            </footer>
+          </div>
+        </div>
+
+    </div>
+    <br>
+
+  </div>
+
+  <!-- oooh, we did great, I think -->
+
+  <script src="js/jquery-3.4.1.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/scripts.js"></script>
+</body>
+
 </html>
