@@ -47,3 +47,6 @@ svg path{
     fill-opacity: 1;
   }
 }
+.nav-link{
+  background-color: rgba(0,0,0,0.8)!important;
+}
