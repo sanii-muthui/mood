@@ -1,20 +1,63 @@
 <!DOCTYPE>
 <html>
 <head>
-	<<link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="icon" href="images/331-mic-18.png" type="image/png">
   <link href="https://fonts.googleapis.com/css?family=Pacifico|Oswald" rel="stylesheet">
 	<title>iCast</title>
 </head>
+<style>
+	body{
+	margin: 0!important;
+	padding: 0!important;
+	background-color: rgba(0,0,0,0.8);
+}
+.col-8{
+	background-color: rgba(0,0,0,0.8);
+}
+.col-8 h1{
+	text-align: center;
+	color: white;
+	font-style: oblique;
+}
+.col-8 p{
+	text-align: center;
+	color: white;
+}
+.footer{
+	color: white;
+}
+.title{
+  background-color: #f1f1f1;
+}
+.title button{
+  display: block;
+  background-color: inherit;
+  color: black;
+  padding: 22px 16px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 17px;
+}
+.title button:hover {
+  background-color: #ddd;
+}
+#color{
+	background-color: grey!important;
+}
+</style>
 <body id ="icast">
 <div class="container">
 	<div class="row">
 		<div class="col-4">
 		<div class="title">
-			<button class="links" onclick="openCast(event, 'home')">Home</button><hr>
+			<button class="links" onclick="openCast(event, 'home')" id="defaultOpen">Home</button><hr>
            <button class="links" onclick="openCast(event, 'education')">Education</button><hr>
-           <button class="links" onclick="openCast(event, 'environment')">Environment,Energy&Resource Education</button><hr>
+           <button class="links" onclick="openCast(event, 'environment')">Environment,<br>Energy&<br>Resource Education</button><hr>
             <button class="links" onclick="openCast(event, 'food')">World Food Issues</button><hr>
             <button class="links" onclick="openCast(event, 'student')">Student Section</button><hr>
             <button class="links" onclick="openCast(event, 'technology')">Technology</button><hr>
@@ -26,43 +69,155 @@
 			<img src="images/Neon-podcast-logo.jpg" class="rounded-circle mx-auto d-block" alt="Cinque Terre" width="304" height="236">
 			 <h1>iCast</h1>
 			 <p>As a community we believe in working together for a common goal. Sharing ambitions for a greater future.Helping each other out since we are a family!<strong>We are One</strong></p>
-			 <footer class="page-footer font-small cyan darken-3">
-			 <div class="footer" style="text-align:center">
-			 <div class="footer-copyright text-center py-3">© 2019 Copyright:Mood-sync</div>
-			 <div class="footer-copyright text-center py-3">Follow us on:</div>
-			 <span class="fa-stack fa-lg">
-			 <i class="fa fa-square-o fa-stack-2x"></i>
-			 <i class="fa fa-twitter fa-stack-1x"></i>
-			 </span>
-			 <span class="fa-stack fa-lg"> <i class="fa fa-instagram fa-stack-2x" aria-hidden="true"></i></span>
-			 <span class="fa-stack fa-lg"> <i class="fa fa-github fa-stack-2x" aria-hidden="true"></i></span>
-			 </div>
-			 </footer>
+			<footer class="page-footer font-small cyan darken-3">
+	        <div class="jumbo" style="text-align:center; color:white;">
+	          <div class="footer-copyright text-center py-3">© 2019 Copyright:Mood</div>
+	          <div class="footer-copyright text-center py-3">Follow us on:</div>
+	          <span class="fa-stack fa-lg">
+	            <i class="fa fa-square-o fa-stack-2x"></i>
+	            <i class="fa fa-twitter fa-stack-1x"></i>
+	          </span>
+	          <span class="fa-stack fa-lg"> <i class="fa fa-instagram fa-stack-2x" aria-hidden="true"></i></span>
+	          <span class="fa-stack fa-lg"> <i class="fa fa-github fa-stack-2x" aria-hidden="true"></i></span>
+	        </div>
+            </footer>
 			</div>
 			  <div class="content" id="education">
-
+			  	<div class="card">
+			  	 <img src="images/16035885-1487452535-uid14874525373300-640x360.jpg" class="card-img-top"  alt="..." height="300">
+			  	</div><br>
+			  	 <div class="card" id="color">
+				<audio controls>
+				<source src="horse.mp3" type="audio/mpeg">
+				</audio><br><br>
+				<audio controls>
+				<source src="horse.mp3" type="audio/mpeg">
+				</audio><br><br>
+				<audio controls>
+				<source src="horse.mp3" type="audio/mpeg">
+				</audio><br><br>
+				<audio controls>
+				<source src="horse.mp3" type="audio/mpeg">
+				</audio><br><br>
+				<audio controls>
+				<source src="horse.mp3" type="audio/mpeg">
+				</audio><br><br>
+			</div>
 			  </div>
 			  <div class="content" id="environment">
-
+			  	<div class="card">
+			  	 <img src="images/pexels-photo-1108572.jpeg" class="card-img-top"  alt="..." height="300"><br>
+                </div><br>
+                <div class="card" id="color">
+                <audio controls>
+				<source src="horse.mp3" type="audio/mpeg">
+				</audio><br><br>
+				<audio controls>
+				<source src="horse.mp3" type="audio/mpeg">
+				</audio><br><br>
+				<audio controls>
+				<source src="horse.mp3" type="audio/mpeg">
+				</audio><br><br>
+				<audio controls>
+				<source src="horse.mp3" type="audio/mpeg">
+				</audio><br><br>
+				<audio controls>
+				<source src="horse.mp3" type="audio/mpeg">
+				</audio><br><br>
+			</div>
 			  </div>
 			  <div class="content" id="food">
-
+			  	<div class="card">
+			  	 <img src="images/coverimagebrsc-6-945x450.jpg" class="card-img-top"  alt="..." height="300"><br>
+                </div><br>
+                <div class="card" id="color">
+                <audio controls>
+				<source src="horse.mp3" type="audio/mpeg">
+				</audio><br><br>
+				<audio controls>
+				<source src="horse.mp3" type="audio/mpeg">
+				</audio><br><br>
+				<audio controls>
+				<source src="horse.mp3" type="audio/mpeg">
+				</audio><br><br>
+				<audio controls>
+				<source src="horse.mp3" type="audio/mpeg">
+				</audio><br><br>
+				<audio controls>
+				<source src="horse.mp3" type="audio/mpeg">
+				</audio><br><br>
+			</div>
 			  </div>
 			  <div class="content" id="student">
-
+			  	<div class="card">
+			  	 <img src="images/maxresdefault.jpg" class="card-img-top"  alt="..." height="300"><br>
+                </div><br>
+                <div class="card" id="color">
+                <audio controls>
+				<source src="horse.mp3" type="audio/mpeg">
+				</audio><br><br>
+				<audio controls>
+				<source src="horse.mp3" type="audio/mpeg">
+				</audio><br><br>
+				<audio controls>
+				<source src="horse.mp3" type="audio/mpeg">
+				</audio><br><br>
+				<audio controls>
+				<source src="horse.mp3" type="audio/mpeg">
+				</audio><br><br>
+				<audio controls>
+				<source src="horse.mp3" type="audio/mpeg">
+				</audio><br><br>
+			</div>
 			  </div>
 			  <div class="content" id="technology">
-
+			  	<div class="card">
+			  	 <img src="images/how-is-technology-transforming-daily-life_header.jpg" class="card-img-top"  alt="..." height="300"><br>
+                </div><br>
+                <div class="card" id="color">
+                <audio controls>
+				<source src="horse.mp3" type="audio/mpeg">
+				</audio><br><br>
+				<audio controls>
+				<source src="horse.mp3" type="audio/mpeg">
+				</audio><br><br>
+				<audio controls>
+				<source src="horse.mp3" type="audio/mpeg">
+				</audio><br><br>
+				<audio controls>
+				<source src="horse.mp3" type="audio/mpeg">
+				</audio><br><br>
+				<audio controls>
+				<source src="horse.mp3" type="audio/mpeg">
+				</audio><br><br>
+			</div>
 			  </div>
 			  <div class="content" id="lifestyle">
-
+			  	<div class="card">
+			  	 <img src="images/healthimg.jpg" class="card-img-top"  alt="..." height="300"><br>
+                </div><br>
+                <div class="card" id="color">
+                <audio controls>
+				<source src="horse.mp3" type="audio/mpeg">
+				</audio><br><br>
+				<audio controls>
+				<source src="horse.mp3" type="audio/mpeg">
+				</audio><br><br>
+				<audio controls>
+				<source src="horse.mp3" type="audio/mpeg">
+				</audio><br><br>
+				<audio controls>
+				<source src="horse.mp3" type="audio/mpeg">
+				</audio><br><br>
+				<audio controls>
+				<source src="horse.mp3" type="audio/mpeg">
+				</audio><br><br>
+			</div>
 			  </div>
 			</div>
 		</div>
 
 	</div>
-	<br>
-</div>
 <script>
 function openCast(evt, castName) {
   var i, content, links;
