@@ -1,12 +1,6 @@
-<<<<<<< HEAD
-/* body {
-  overflow-y:hidden;
-} */
-=======
 body {
-  overflow-z:hidden;
+  overflow-y:hidden;
 }
->>>>>>> caa83de14e544dbed6b7215a7d955676a534cb56
 
 .brain {
   text-align: center;
@@ -17,10 +11,7 @@ body {
   font-size: 40px;
 }
 
-<<<<<<< HEAD
 
-=======
->>>>>>> caa83de14e544dbed6b7215a7d955676a534cb56
 svg {
   max-width: 70%;
   max-height: 30%;
@@ -31,10 +22,6 @@ svg {
   bottom: 0;
   margin: auto;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> caa83de14e544dbed6b7215a7d955676a534cb56
 svg path{
 /*   fill-opacity: 0;
   fill: #fff !important; */
