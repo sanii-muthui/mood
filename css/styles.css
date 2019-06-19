@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 /* body {
   overflow-y:hidden;
 } */
+=======
+body {
+  overflow-z:hidden;
+}
+>>>>>>> caa83de14e544dbed6b7215a7d955676a534cb56
 
 .brain {
   text-align: center;
@@ -11,7 +17,10 @@
   font-size: 40px;
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> caa83de14e544dbed6b7215a7d955676a534cb56
 svg {
   max-width: 70%;
   max-height: 30%;
@@ -22,6 +31,10 @@ svg {
   bottom: 0;
   margin: auto;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> caa83de14e544dbed6b7215a7d955676a534cb56
 svg path{
 /*   fill-opacity: 0;
   fill: #fff !important; */
@@ -47,3 +60,52 @@ svg path{
     fill-opacity: 1;
   }
 }
+<<<<<<< HEAD
+=======
+
+
+@import url('bootstrap.min.css');
+body{
+	margin: 0!important;
+	padding: 0!important;
+}
+.col-8{
+	background-color: rgba(0,0,0,0.8);
+}
+.col-8 img{
+	margin-top: 70px;
+}
+.col-8 h1{
+	text-align: center;
+	color: white;
+	font-style: oblique;
+}
+.col-8 p{
+	text-align: center;
+	color: white;
+}
+.footer{
+	color: white;
+}
+.title{
+  float: left;
+  background-color: #f1f1f1;
+}
+.title button{
+  display: block;
+  background-color: inherit;
+  color: black;
+  padding: 22px 16px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 17px;
+}
+.title button:hover {
+  background-color: #ddd;
+}
+
+>>>>>>> caa83de14e544dbed6b7215a7d955676a534cb56
