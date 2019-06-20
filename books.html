@@ -17,10 +17,12 @@
       color: white;
 
     }
-.jumbotron{
-  background-color:rgba(0,0,0,0.8);
-  color: white;
-}
+
+    .jumbotron {
+      background-color: rgba(0, 0, 0, 0.8);
+      color: white;
+    }
+
     .container-fluid {
       margin: 0 auto;
       width: 960px;
@@ -52,6 +54,10 @@
       .container-fluid {
         width: 70%;
       }
+      .nav-link{
+       background-color: rgba(0,0,0,0.8)!important;
+   }
+
     }
     .nav-link{
     	background-color: rgba(0,0,0,0.8)!important;
@@ -226,6 +232,31 @@ $(".navs ul li").show();
     }
   </style>
   <br>
+  <br>
+  <div class="navs">
+    <ul class="nav justify-content-end color-text-secondary mr-6">
+      <li class="nav-item">
+        <a class="nav-link  bg-info text-white" href="index.html">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link  bg-info text-white" href="music.html">Music</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link  bg-info text-white" href="movies.html">Movies</a>
+      <li class="nav-item">
+        <a class="nav-link  bg-info text-white" href="games.html">Games</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link  bg-info text-white" href="books.html">Books</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link  bg-info text-white" href="#contact">Contact Us</a>
+      </li>
+    </ul>
+  </div>
+  <br>
+  <br>
+  <br>
   <div class="container-fluid">
     <div class="jumbotron">
       <div class="page-header ">
@@ -239,18 +270,28 @@ $(".navs ul li").show();
         <br>
         <div class="row">
           <div class="col-12">
+<<<<<<< HEAD
             <h3 class="one" style="text-align: center;">Books as per your mood</h3>
             <br>
             <div class="justify-content-end ">
+=======
+            <h3 class="one" style="text-align: center;">Your wish is Mood Sync's command:</h3>
+            <br>
+            <div class="justify-content-end">
+>>>>>>> fa24e1913b6d070e70966c2a3ff7ae73a6f840c4
               <p class="one"></p>
+              <p>Select what you would like to feel and await our selection.</p>
+                <p>Then download your book and enjoy yourself.</p>
+              <p class="moodParagraph"></p>
               <select class="form-control bookMood">
                 <option label="Happy" value="happy">happy</option>
-                <option label="Sad" value="700">sad</option>
-                <option label="In love" value="1000">in love</option>
-                <option label="Dreamy" value="">Dreamy</option>
-                <option label="Scared" value="">Scared</option>
+                <option label="Sad" value="sad">sad</option>
+                <option label="In love" value="in love">in love</option>
+                <option label="Dreamy" value="Dreamy">Dreamy</option>
+                <option label="Scared" value="Scared">Scared</option>
               </select>
               <div class="book">
+<<<<<<< HEAD
                 <div class="happyBook">
                   <p>Here is a selection of books to help you cheer up</p>
                   <p class="moodParagraph"></p>
@@ -270,6 +311,31 @@ $(".navs ul li").show();
                     <li class="list-group-item">sad 2</li>
                   </ul>
                 </div>
+=======
+                <ul class="list-group happyChoice">
+                  <li class="list-group-item"> <a href="https://drive.google.com/open?id=0ByenimV6OTsgSE1yY1piTF82cnM"> War Cross by Marie Lu</a> </li>
+                  <li class="list-group-item"> <a href="https://drive.google.com/open?id=0ByenimV6OTsgLXhWOG9IdHZ5bm1DcFRFWmNGOEduMlM3cHJR"> I was Born For This By Alice Oseman</a> </li>
+                  <li class="list-group-item"> <a href="https://drive.google.com/open?id=0ByenimV6OTsgVVZINkUwZTBJS0E"> Matilda by Roald Dahl</a> </li>
+                  <li class="list-group-item"> <a href="https://drive.google.com/open?id=0ByenimV6OTsgd3NDTWRQMzlJaVk"> The Sun Is Also A Star by Nicola Yoon</a> </li>
+                  <li class="list-group-item"> <a href="https://drive.google.com/open?id=0ByenimV6OTsgelllUG5CT0lkM1F5ajVQRjktSlBSUnQ5eDJF"> Daughter of Smoke and Bone by Laini Taylor</a> </li>
+                </ul>
+                <ul class="list-group sadChoice">
+                  <li class="list-group-item"> <a href="https://drive.google.com/open?id=0ByenimV6OTsgMnI4VnMyaHpCRzQ2ODdjSFBMZEFsZ2M4WEJF">The Rest Of Us Live Here by Patrick Ness</a> </li>
+                  <li class="list-group-item"> <a href="https://drive.google.com/open?id=0ByenimV6OTsgTlZUZDF1Z3haVXlNMkZGbUhBOUxSWl9CRklZ">The Perks of Being A Wall Flower by Stephen Chobosky</a> </li>
+                </ul>
+                <ul class="list-group inLoveChoice">
+                  <li class="list-group-item"> <a href="https://drive.google.com/open?id=0ByenimV6OTsgUXdQRkpaUmw1TEU">Star Dust by Neil Gaiman</a> </li>
+                  <li class="list-group-item"> <a href="https://drive.google.com/open?id=0ByenimV6OTsgWkxzbUdNVDREWlk">Simon vs The Homosapiens by Becky Albertali</a> </li>
+                </ul>
+                <ul class="list-group dreamyChoice">
+                  <li class="list-group-item"> <a href="https://drive.google.com/open?id=0ByenimV6OTsgZnZ3NWlncEtjX1JJLWZRd0hCNDV4Y0FHbkhV"> A Court Of Thornes and Roses By Sarah J Maas</a> </li>
+                  <li class="list-group-item"> <a href="https://drive.google.com/open?id=0ByenimV6OTsgSS1jQm1JSi11aEE">All The Crooked Saints by Maggie Stiefvater</a> </li>
+                </ul>
+                <ul class="list-group scaredChoice">
+                  <li class="list-group-item"> <a href="https://drive.google.com/open?id=0ByenimV6OTsgMDk2dTVrOTgtTk4tano5YVd6NlBNZUpRSF9F">Duma Key by Stephen King</a> </li>
+                  <li class="list-group-item"> <a href="https://drive.google.com/open?id=0ByenimV6OTsgc2dxNzdUUGxuenAtNV9xZnZlWG91a2FwNUpZ"> Lisey's Story by Stephen King</a> </li>
+                </ul>
+>>>>>>> fa24e1913b6d070e70966c2a3ff7ae73a6f840c4
               </div>
             </div>
           </div>
@@ -277,9 +343,11 @@ $(".navs ul li").show();
           <script src="js/popper.min.js"></script>
           <script src="js/bootstrap.min.js"></script>
           <script>
+
             console.log('redbull');
             console.log('bruh');
             console.log(69);
+
             $(document).ready(function() {
               //randomize plugin
               $.fn.randomize = function(selector) {
@@ -290,6 +358,7 @@ $(".navs ul li").show();
                 });
                 return this;
               };
+<<<<<<< HEAD
               $('ul li').hide();
               $('.bookMood').click(function() {
                 if ($(".bookMood option:selected").val() === "happy") {
@@ -297,6 +366,44 @@ $(".navs ul li").show();
                   $('.happyChoice li:first-child').show();
                 };
               })
+=======
+
+              $('.list-group-item').hide();
+
+              $('.bookMood').click(function(){
+                if ($('.bookMood option:selected').val() == 'happy'){
+                  $('.list-group-item').hide();
+                  $('.happyChoice .list-group-item').randomize();
+                  $('.happyChoice .list-group-item:first-child').show();
+                }
+
+                else if ($('.bookMood option:selected').val() == 'sad'){
+                  $('.list-group-item').hide();
+                  $('.sadChoice .list-group-item').randomize();
+                  $('.sadChoice .list-group-item:first-child').show();
+                }
+
+                else if ($('.bookMood option:selected').val() == 'in love'){
+                  $('.list-group-item').hide();
+                  $('.inLoveChoice .list-group-item').randomize();
+                  $('.inLoveChoice .list-group-item:first-child').show();
+                }
+
+                else if ($('.bookMood option:selected').val() == 'Dreamy'){
+                  $('.list-group-item').hide();
+                  $('.dreamyChoice .list-group-item').randomize();
+                  $('.dreamyChoice .list-group-item:first-child').show();
+                }
+
+                else if ($('.bookMood option:selected').val() == 'Scared'){
+                  $('.list-group-item').hide();
+                  $('.scaredChoice .list-group-item').randomize();
+                  $('.scaredChoice .list-group-item:first-child').show();
+                }
+
+              });
+
+>>>>>>> fa24e1913b6d070e70966c2a3ff7ae73a6f840c4
             });
           </script>
 </body>

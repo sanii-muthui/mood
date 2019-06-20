@@ -1,31 +1,200 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>iGames</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="shorcut icon" href="images/Emoji_emoticon_emoticons_expression_laugh_mood-512.png" type="image/png">
+</head>
+<body>
+  <div class="container">
+    <style media="screen">
+      @import url('bootstrap.min.css');
+      body {
+        margin: 0 !important;
+        padding: 0 !important;
+      background-image: url("https://images.unsplash.com/photo-1470790376778-a9fbc86d70e2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=349&q=80")
+      ;     }
+      .col-8 {
+        background-color: rgba(0,0,0,0.8);
+        width: 100%;
+      }
+      .col-8 img {
+        margin-top: 70px;
+      }
+      .col-8 h1 {
+        text-align: center;
+        color: white;
+        font-style: oblique;
+      }
+      .col-8 p {
+        text-align: center;
+        color: white;
+      }
+      hr {
+        border-style: none;
+      }
+      .footer {
+        color: white;
+      }
+      .title {
+        float: left;
+        background-color: #f1f1f1;
+        width: 100%;
+      }
+      .title button {
+        display: block;
+        background-color: inherit;
+        color: black;
+        padding: 22px 16px;
+        width: 100%;
+        border: none;
+        outline: none;
+        text-align: left;
+        cursor: pointer;
+        transition: 0.3s;
+        font-size: 17px;
+      }
+      .title button:hover {
+        background-color: #ddd;
+      }
+      .nav-link{
+background-color:rgba(0,0,0,0.8)!important;
+      }
+    </style>
+    <br>
+    <ul class="nav justify-content-end bg-blue color-text-secondary mr-6">
+      <li class="nav-item">
+        <a class="nav-link  bg-info text-white" href="index.html">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link  bg-info text-white" href="music.html">iMusic</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link  bg-info text-white" href="icast.html">iCasts</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link  bg-info text-white" href="movies.html">iMovies</a>
+
+      <li class="nav-item">
+        <a class="nav-link  bg-info text-white" href="books.html">iBooks</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link  bg-info text-white" href="#contact">Contact Us</a>
+      </li>
+    </ul>
+    <!-- lets screw things up -->
+    <br><br>
+    <div class="row">
+        <div class="col-4">
+          <div class="title">
+            <button class="links" onclick="openCast(event, 'home')">Home</button>
+            <hr>
+            <button class="links" onclick="openGame(event, 'action')">Action games</button>
+            <hr>
+            <button class="links" onclick="openGame(event, 'sport')">Sport games</button>
+            <hr>
+            <button class="links" onclick="openGame(event, 'brg')">Battle Royale games</button>
+            <hr>
+            <button class="links" onclick="openGame(event, 'rpg')">Role-playing games</button>
+            <hr>
+            <button class="links" onclick="openGame(event, 'adventure')">Adventure games</button>
+            <hr>
+            <button class="links" onclick="openGame(event, 'racing')">Racing games</button>
+            <hr>
+            <button class="links" onclick="openGame(event, 'fighting')">Fighting games</button>
+            <hr>
+            <button class="links" onclick="openGame(event, 'rts')">Real-time strategy games</button>
+            <hr>
+            <button class="links" onclick="openGame(event, 'simulator')">Simulator</button>
+            <hr>
+          </div>
+      </div>
+      <div class="col-8">
+        <div class="content" id="home">
+          <img src="images/game1.jpg" class="mx-auto d-block" alt="Cinque Terre" width="330" height="240">
+          <h1>PlayerLair</h1>
+          <p>This section brings you links to play or download video games and reviews of the most exciting releases. We cover everything from PlayStation and Xbox blockbusters, to quirky Nintendo games, to the cool indie gems on PC and Android that
+            you might otherwise miss. We have genres listed down for you, to help you choose a game that your mood needs</p>
+          <footer class="page-footer font-small cyan darken-3">
+            <div class="footer" style="text-align:center">
+              <div class="footer-copyright text-center py-3">© 2019 Copyright: Mood-sync</div>
+              <div class="footer-copyright text-center py-3">Follow us on:</div>
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-square-o fa-stack-2x"></i>
+                <i class="fa fa-twitter fa-stack-1x"></i>
+              </span>
+              <span class="fa-stack fa-lg"> <i class="fa fa-instagram fa-stack-2x" aria-hidden="true"></i></span>
+              <span class="fa-stack fa-lg"> <i class="fa fa-github fa-stack-2x" aria-hidden="true"></i></span>
+            </div>
+          </footer>
+        </div>
+        <div class="content" id="action">
+        </div>
+        <div class="content" id="sport">
+        </div>
+        <div class="content" id="brg">
+        </div>
+        <div class="content" id="rpg">
+        </div>
+        <div class="content" id="adventure">
+        </div>
+        <div class="content" id="fighting">
+        </div>
+        <div class="content" id="trs">
+        </div>
+        <div class="content" id="simulator">
+        </div>
+      </div>
+    </div>
+    <br>
+  </div>
+  <!-- oooh, we did great, I think -->
+  <script src="js/jquery-3.4.1.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/scripts.js"></script>
+</body>
+</html>
+Collapse
+
+
+
+6:53 PM
+saniis code 
 <!DOCTYPE>
 <html>
 <head>
+<<<<<<< HEAD
 	<link rel="stylesheet" href="css/bootstrap.min.css">
  rcut icon" href="images/Emoji_emoticon_emoticons_expression_laugh_mood-512.png" type="image/png">
+=======
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+ <link rel="icon" href="images/Emoji_emoticon_emoticons_expression_laugh_mood-512.png" type="image/png">
+>>>>>>> fa24e1913b6d070e70966c2a3ff7ae73a6f840c4
   <link href="https://fonts.googleapis.com/css?family=Pacifico|Oswald" rel="stylesheet">
-	<title>iCast</title>
+    <title>iCast</title>
 </head>
 <style>
-	body{
-	margin: 0!important;
-	padding: 0!important;
-	background-image: url("https://images.unsplash.com/photo-1470790376778-a9fbc86d70e2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=349&q=80");
+    body{
+    margin: 0!important;
+    padding: 0!important;
+    background-image: url("https://images.unsplash.com/photo-1470790376778-a9fbc86d70e2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=349&q=80");
 }
 .col-8{
-	background-color: rgba(0,0,0,0.8);
+    background-color: rgba(0,0,0,0.8);
 }
 .col-8 h1{
-	text-align: center;
-	color: white;
-	font-style: oblique;
+    text-align: center;
+    color: white;
+    font-style: oblique;
 }
 .col-8 p{
-	text-align: center;
-	color: white;
+    text-align: center;
+    color: white;
 }
 .footer{
-	color: white;
+    color: white;
 }
 .title{
   background-color: #f1f1f1;
@@ -47,14 +216,14 @@
   background-color: #ddd;
 }
 #color{
-	background-color: grey!important;
+    background-color: grey!important;
 }
 .nav-link{
-	background-color: rgba(0,0,0,0.8)!important;
+    background-color: rgba(0,0,0,0.8)!important;
 }
 </style>
 <body id ="icast">
-	<ul class="nav justify-content-end color-text-secondary mr-6">
+    <ul class="nav justify-content-end color-text-secondary mr-6">
       <li class="nav-item">
         <a class="nav-link  bg-info text-white" href="index.html" >Home</a>
       </li>
@@ -74,10 +243,10 @@
       </li>
 </ul>
 <div class="container">
-	<div class="row">
-		<div class="col-4">
-		<div class="title">
-			<button class="links" onclick="openCast(event, 'home')" id="defaultOpen">Home</button><hr>
+    <div class="row">
+        <div class="col-4">
+        <div class="title">
+            <button class="links" onclick="openCast(event, 'home')" id="defaultOpen">Home</button><hr>
            <button class="links" onclick="openCast(event, 'education')">Education</button><hr>
            <button class="links" onclick="openCast(event, 'environment')">Environment,<br>Energy&<br>Resource Education</button><hr>
             <button class="links" onclick="openCast(event, 'food')">World Food Issues</button><hr>
@@ -85,161 +254,160 @@
             <button class="links" onclick="openCast(event, 'technology')">Technology</button><hr>
             <button class="links" onclick="openCast(event, 'lifestyle')">Lifestyle</button>
         </div>
-		</div>
-		<div class="col-8">
-			<div class="content" id="home">
-			<img src="images/Neon-podcast-logo.jpg" class="rounded-circle mx-auto d-block" alt="Cinque Terre" width="304" height="236">
-			 <h1>iCast</h1>
-			 <p>As a community we believe in working together for a common goal. Sharing ambitions for a greater future.Helping each other out since we are a family!<strong>We are One</strong></p>
-			<footer class="page-footer font-small cyan darken-3">
-	        <div class="jumbo" style="text-align:center; color:white;">
-	          <div class="footer-copyright text-center py-3">© 2019 Copyright:Mood</div>
-	          <div class="footer-copyright text-center py-3">Follow us on:</div>
-	          <span class="fa-stack fa-lg">
-	            <i class="fa fa-square-o fa-stack-2x"></i>
-	            <i class="fa fa-twitter fa-stack-1x"></i>
-	          </span>
-	          <span class="fa-stack fa-lg"> <i class="fa fa-instagram fa-stack-2x" aria-hidden="true"></i></span>
-	          <span class="fa-stack fa-lg"> <i class="fa fa-github fa-stack-2x" aria-hidden="true"></i></span>
-	        </div>
+        </div>
+        <div class="col-8">
+            <div class="content" id="home">
+            <img src="images/Neon-podcast-logo.jpg" class="rounded-circle mx-auto d-block" alt="Cinque Terre" width="304" height="236">
+             <h1>iCast</h1>
+             <p>As a community we believe in working together for a common goal. Sharing ambitions for a greater future.Helping each other out since we are a family!<strong>We are One</strong></p>
+            <footer class="page-footer font-small cyan darken-3">
+            <div class="jumbo" style="text-align:center; color:white;">
+              <div class="footer-copyright text-center py-3">© 2019 Copyright:Mood</div>
+              <div class="footer-copyright text-center py-3">Follow us on:</div>
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-square-o fa-stack-2x"></i>
+                <i class="fa fa-twitter fa-stack-1x"></i>
+              </span>
+              <span class="fa-stack fa-lg"> <i class="fa fa-instagram fa-stack-2x" aria-hidden="true"></i></span>
+              <span class="fa-stack fa-lg"> <i class="fa fa-github fa-stack-2x" aria-hidden="true"></i></span>
+            </div>
             </footer>
-			</div>
-			  <div class="content" id="education">
-			  	<div class="card">
-			  	 <img src="images/16035885-1487452535-uid14874525373300-640x360.jpg" class="card-img-top"  alt="..." height="300">
-			  	</div><br>
-			  	 <div class="card" id="color">
-				<audio controls>
-				<source src="horse.mp3" type="audio/mpeg">
-				</audio><br><br>
-				<audio controls>
-				<source src="horse.mp3" type="audio/mpeg">
-				</audio><br><br>
-				<audio controls>
-				<source src="horse.mp3" type="audio/mpeg">
-				</audio><br><br>
-				<audio controls>
-				<source src="horse.mp3" type="audio/mpeg">
-				</audio><br><br>
-				<audio controls>
-				<source src="horse.mp3" type="audio/mpeg">
-				</audio><br><br>
-			</div>
-			  </div>
-			  <div class="content" id="environment">
-			  	<div class="card">
-			  	 <img src="images/pexels-photo-1108572.jpeg" class="card-img-top"  alt="..." height="300"><br>
+            </div>
+              <div class="content" id="education">
+                <div class="card">
+                 <img src="images/16035885-1487452535-uid14874525373300-640x360.jpg" class="card-img-top"  alt="..." height="300">
+                </div><br>
+                 <div class="card" id="color">
+                <audio controls>
+                <source src="horse.mp3" type="audio/mpeg">
+                </audio><br><br>
+                <audio controls>
+                <source src="horse.mp3" type="audio/mpeg">
+                </audio><br><br>
+                <audio controls>
+                <source src="horse.mp3" type="audio/mpeg">
+                </audio><br><br>
+                <audio controls>
+                <source src="horse.mp3" type="audio/mpeg">
+                </audio><br><br>
+                <audio controls>
+                <source src="horse.mp3" type="audio/mpeg">
+                </audio><br><br>
+            </div>
+              </div>
+              <div class="content" id="environment">
+                <div class="card">
+                 <img src="images/pexels-photo-1108572.jpeg" class="card-img-top"  alt="..." height="300"><br>
                 </div><br>
                 <div class="card" id="color">
                 <audio controls>
-				<source src="horse.mp3" type="audio/mpeg">
-				</audio><br><br>
-				<audio controls>
-				<source src="horse.mp3" type="audio/mpeg">
-				</audio><br><br>
-				<audio controls>
-				<source src="horse.mp3" type="audio/mpeg">
-				</audio><br><br>
-				<audio controls>
-				<source src="horse.mp3" type="audio/mpeg">
-				</audio><br><br>
-				<audio controls>
-				<source src="horse.mp3" type="audio/mpeg">
-				</audio><br><br>
-			</div>
-			  </div>
-			  <div class="content" id="food">
-			  	<div class="card">
-			  	 <img src="images/coverimagebrsc-6-945x450.jpg" class="card-img-top"  alt="..." height="300"><br>
+                <source src="horse.mp3" type="audio/mpeg">
+                </audio><br><br>
+                <audio controls>
+                <source src="horse.mp3" type="audio/mpeg">
+                </audio><br><br>
+                <audio controls>
+                <source src="horse.mp3" type="audio/mpeg">
+                </audio><br><br>
+                <audio controls>
+                <source src="horse.mp3" type="audio/mpeg">
+                </audio><br><br>
+                <audio controls>
+                <source src="horse.mp3" type="audio/mpeg">
+                </audio><br><br>
+            </div>
+              </div>
+              <div class="content" id="food">
+                <div class="card">
+                 <img src="images/coverimagebrsc-6-945x450.jpg" class="card-img-top"  alt="..." height="300"><br>
                 </div><br>
                 <div class="card" id="color">
                 <audio controls>
-				<source src="horse.mp3" type="audio/mpeg">
-				</audio><br><br>
-				<audio controls>
-				<source src="horse.mp3" type="audio/mpeg">
-				</audio><br><br>
-				<audio controls>
-				<source src="horse.mp3" type="audio/mpeg">
-				</audio><br><br>
-				<audio controls>
-				<source src="horse.mp3" type="audio/mpeg">
-				</audio><br><br>
-				<audio controls>
-				<source src="horse.mp3" type="audio/mpeg">
-				</audio><br><br>
-			</div>
-			  </div>
-			  <div class="content" id="student">
-			  	<div class="card">
-			  	 <img src="images/maxresdefault.jpg" class="card-img-top"  alt="..." height="300"><br>
+                <source src="horse.mp3" type="audio/mpeg">
+                </audio><br><br>
+                <audio controls>
+                <source src="horse.mp3" type="audio/mpeg">
+                </audio><br><br>
+                <audio controls>
+                <source src="horse.mp3" type="audio/mpeg">
+                </audio><br><br>
+                <audio controls>
+                <source src="horse.mp3" type="audio/mpeg">
+                </audio><br><br>
+                <audio controls>
+                <source src="horse.mp3" type="audio/mpeg">
+                </audio><br><br>
+            </div>
+              </div>
+              <div class="content" id="student">
+                <div class="card">
+                 <img src="images/maxresdefault.jpg" class="card-img-top"  alt="..." height="300"><br>
                 </div><br>
                 <div class="card" id="color">
                 <audio controls>
-				<source src="horse.mp3" type="audio/mpeg">
-				</audio><br><br>
-				<audio controls>
-				<source src="horse.mp3" type="audio/mpeg">
-				</audio><br><br>
-				<audio controls>
-				<source src="horse.mp3" type="audio/mpeg">
-				</audio><br><br>
-				<audio controls>
-				<source src="horse.mp3" type="audio/mpeg">
-				</audio><br><br>
-				<audio controls>
-				<source src="horse.mp3" type="audio/mpeg">
-				</audio><br><br>
-			</div>
-			  </div>
-			  <div class="content" id="technology">
-			  	<div class="card">
-			  	 <img src="images/how-is-technology-transforming-daily-life_header.jpg" class="card-img-top"  alt="..." height="300"><br>
+                <source src="horse.mp3" type="audio/mpeg">
+                </audio><br><br>
+                <audio controls>
+                <source src="horse.mp3" type="audio/mpeg">
+                </audio><br><br>
+                <audio controls>
+                <source src="horse.mp3" type="audio/mpeg">
+                </audio><br><br>
+                <audio controls>
+                <source src="horse.mp3" type="audio/mpeg">
+                </audio><br><br>
+                <audio controls>
+                <source src="horse.mp3" type="audio/mpeg">
+                </audio><br><br>
+            </div>
+              </div>
+              <div class="content" id="technology">
+                <div class="card">
+                 <img src="images/how-is-technology-transforming-daily-life_header.jpg" class="card-img-top"  alt="..." height="300"><br>
                 </div><br>
                 <div class="card" id="color">
                 <audio controls>
-				<source src="horse.mp3" type="audio/mpeg">
-				</audio><br><br>
-				<audio controls>
-				<source src="horse.mp3" type="audio/mpeg">
-				</audio><br><br>
-				<audio controls>
-				<source src="horse.mp3" type="audio/mpeg">
-				</audio><br><br>
-				<audio controls>
-				<source src="horse.mp3" type="audio/mpeg">
-				</audio><br><br>
-				<audio controls>
-				<source src="horse.mp3" type="audio/mpeg">
-				</audio><br><br>
-			</div>
-			  </div>
-			  <div class="content" id="lifestyle">
-			  	<div class="card">
-			  	 <img src="images/healthimg.jpg" class="card-img-top"  alt="..." height="300"><br>
+                <source src="horse.mp3" type="audio/mpeg">
+                </audio><br><br>
+                <audio controls>
+                <source src="horse.mp3" type="audio/mpeg">
+                </audio><br><br>
+                <audio controls>
+                <source src="horse.mp3" type="audio/mpeg">
+                </audio><br><br>
+                <audio controls>
+                <source src="horse.mp3" type="audio/mpeg">
+                </audio><br><br>
+                <audio controls>
+                <source src="horse.mp3" type="audio/mpeg">
+                </audio><br><br>
+            </div>
+              </div>
+              <div class="content" id="lifestyle">
+                <div class="card">
+                 <img src="images/healthimg.jpg" class="card-img-top"  alt="..." height="300"><br>
                 </div><br>
                 <div class="card" id="color">
                 <audio controls>
-				<source src="horse.mp3" type="audio/mpeg">
-				</audio><br><br>
-				<audio controls>
-				<source src="horse.mp3" type="audio/mpeg">
-				</audio><br><br>
-				<audio controls>
-				<source src="horse.mp3" type="audio/mpeg">
-				</audio><br><br>
-				<audio controls>
-				<source src="horse.mp3" type="audio/mpeg">
-				</audio><br><br>
-				<audio controls>
-				<source src="horse.mp3" type="audio/mpeg">
-				</audio><br><br>
-			</div>
-			  </div>
-			</div>
-		</div>
-
-	</div>
+                <source src="horse.mp3" type="audio/mpeg">
+                </audio><br><br>
+                <audio controls>
+                <source src="horse.mp3" type="audio/mpeg">
+                </audio><br><br>
+                <audio controls>
+                <source src="horse.mp3" type="audio/mpeg">
+                </audio><br><br>
+                <audio controls>
+                <source src="horse.mp3" type="audio/mpeg">
+                </audio><br><br>
+                <audio controls>
+                <source src="horse.mp3" type="audio/mpeg">
+                </audio><br><br>
+            </div>
+              </div>
+            </div>
+        </div>
+    </div>
 <script>
 function openCast(evt, castName) {
   var i, content, links;
@@ -254,7 +422,6 @@ function openCast(evt, castName) {
   document.getElementById(castName).style.display = "block";
   evt.currentTarget.className += " active";
 }
-
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();
 </script>
